@@ -1,6 +1,6 @@
 # race-game-hyperfast ![Build status badge](https://github.com/mameeewin/race-game-hyperfast/workflows/MakeCode/badge.svg)
 
-https://makecode.com/_3Yh0tMKWhP8a
+https://makecode.com/_0i39t8gKtX5a
 
 ## Use this extension
 
