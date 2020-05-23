@@ -658,67 +658,7 @@ car = sprites.create(img`
 car.z = 10
 car.setPosition(80, 104)
 controller.moveSprite(car, 100, 0)
-game.onUpdateInterval(5000, function () {
-    Bing = sprites.createProjectileFromSide(img`
-. . . . . . . . . . . . . . . . 
-. 2 2 2 . . . . . . . . . . . . 
-. 2 2 2 2 . . . . 2 2 2 2 2 . . 
-2 2 2 2 2 2 . . 2 2 2 2 2 2 . . 
-2 2 3 2 2 2 2 2 2 2 2 2 2 2 . . 
-2 2 2 2 2 2 2 2 3 2 2 2 2 2 . . 
-2 2 2 2 2 2 2 2 2 2 2 2 3 2 . . 
-2 3 2 2 3 2 2 2 2 2 2 2 2 2 . . 
-2 2 2 2 2 2 2 2 2 2 2 2 2 . . . 
-. 2 2 2 2 2 2 2 2 3 2 2 2 . . . 
-. . 2 2 2 2 2 2 2 2 2 2 . . . . 
-. . . 2 2 2 3 2 2 2 2 . . . . . 
-. . . 2 2 2 2 2 2 2 . . . . . . 
-. . . . 2 2 2 2 2 2 . . . . . . 
-. . . . . 2 2 2 2 . . . . . . . 
-. . . . . . 2 2 . . . . . . . . 
-`, 0, 100)
-    Bing.setPosition(Math.randomRange(40, 100), -1)
-    Bing.setKind(SpriteKind.Heart)
-})
-forever(function () {
-    music.playMelody("E B C5 A B G A F ", 120)
-})
-forever(function () {
-    if (info.life() >= 110) {
-        game.over(true, effects.smiles)
-    }
-})
-game.onUpdateInterval(3000, function () {
-    Ender = sprites.createProjectileFromSide(img`
-. . . . . . c c 6 6 . . . . . . 
-. . . . . c 6 5 7 6 c . . . . . 
-. . . . c 6 7 7 5 7 6 c . . . . 
-. . . . c c 6 7 7 6 6 6 . . . . 
-. . . c c 6 c 6 6 6 7 c c . . . 
-. . 6 c 6 6 6 7 7 7 c c 6 c . . 
-. . c 7 6 6 6 6 7 6 6 7 7 6 . . 
-. . c 6 7 7 7 7 7 7 7 7 6 c . . 
-. . c c 6 7 7 7 7 7 7 6 c c . . 
-. c 6 7 c c 7 6 6 7 6 6 7 6 c . 
-. c 7 7 7 6 6 6 6 6 7 7 7 7 c . 
-. c 6 7 7 7 7 7 7 7 7 7 7 6 6 . 
-. c c 7 7 6 7 7 7 6 7 7 6 6 6 6 
-c 6 7 6 c c 6 7 6 6 6 6 6 7 7 6 
-c 7 7 7 7 6 6 6 6 6 6 7 7 7 7 6 
-c c 7 7 7 7 7 7 7 7 7 7 7 7 6 c 
-. c 6 7 6 7 7 7 6 7 7 7 6 7 c . 
-. . c c 6 6 7 6 6 6 7 6 6 c . . 
-. . . c c c 6 c 6 6 c c c . . . 
-. . . . . c c c c c c . . . . . 
-. . . . . . . e e . . . . . . . 
-. . . . . . e e e e . . . . . . 
-. . . . . e e e e e e . . . . . 
-. . . . . . . e e . . . . . . . 
-`, 0, 200)
-    Ender.setKind(SpriteKind.ENDER)
-    Ender.setPosition(Math.randomRange(40, 100), 0)
-})
-game.onUpdateInterval(1000, function () {
+game.onUpdateInterval(500, function () {
     Wall1 = sprites.createProjectileFromSide(img`
 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 . 
 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 . 
@@ -845,7 +785,7 @@ game.onUpdateInterval(1000, function () {
     Wall1.vy += 100
     Wall1.setKind(SpriteKind.projo)
 })
-game.onUpdateInterval(1000, function () {
+game.onUpdateInterval(500, function () {
     Wall = sprites.createProjectileFromSide(img`
 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
@@ -971,7 +911,7 @@ game.onUpdateInterval(1000, function () {
     Wall.setPosition(80, 8)
     Wall.vy += 100
 })
-game.onUpdateInterval(1000, function () {
+game.onUpdateInterval(500, function () {
     Road = sprites.createProjectileFromSide(img`
 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
@@ -1097,4 +1037,64 @@ game.onUpdateInterval(1000, function () {
     Road.setKind(SpriteKind.Road)
     Road.setPosition(80, 8)
     Road.vy += 100
+})
+game.onUpdateInterval(5000, function () {
+    Bing = sprites.createProjectileFromSide(img`
+. . . . . . . . . . . . . . . . 
+. 2 2 2 . . . . . . . . . . . . 
+. 2 2 2 2 . . . . 2 2 2 2 2 . . 
+2 2 2 2 2 2 . . 2 2 2 2 2 2 . . 
+2 2 3 2 2 2 2 2 2 2 2 2 2 2 . . 
+2 2 2 2 2 2 2 2 3 2 2 2 2 2 . . 
+2 2 2 2 2 2 2 2 2 2 2 2 3 2 . . 
+2 3 2 2 3 2 2 2 2 2 2 2 2 2 . . 
+2 2 2 2 2 2 2 2 2 2 2 2 2 . . . 
+. 2 2 2 2 2 2 2 2 3 2 2 2 . . . 
+. . 2 2 2 2 2 2 2 2 2 2 . . . . 
+. . . 2 2 2 3 2 2 2 2 . . . . . 
+. . . 2 2 2 2 2 2 2 . . . . . . 
+. . . . 2 2 2 2 2 2 . . . . . . 
+. . . . . 2 2 2 2 . . . . . . . 
+. . . . . . 2 2 . . . . . . . . 
+`, 0, 100)
+    Bing.setPosition(Math.randomRange(40, 100), -1)
+    Bing.setKind(SpriteKind.Heart)
+})
+forever(function () {
+    music.playMelody("E B C5 A B G A F ", 120)
+})
+forever(function () {
+    if (info.life() >= 110) {
+        game.over(true, effects.smiles)
+    }
+})
+game.onUpdateInterval(3000, function () {
+    Ender = sprites.createProjectileFromSide(img`
+. . . . . . c c 6 6 . . . . . . 
+. . . . . c 6 5 7 6 c . . . . . 
+. . . . c 6 7 7 5 7 6 c . . . . 
+. . . . c c 6 7 7 6 6 6 . . . . 
+. . . c c 6 c 6 6 6 7 c c . . . 
+. . 6 c 6 6 6 7 7 7 c c 6 c . . 
+. . c 7 6 6 6 6 7 6 6 7 7 6 . . 
+. . c 6 7 7 7 7 7 7 7 7 6 c . . 
+. . c c 6 7 7 7 7 7 7 6 c c . . 
+. c 6 7 c c 7 6 6 7 6 6 7 6 c . 
+. c 7 7 7 6 6 6 6 6 7 7 7 7 c . 
+. c 6 7 7 7 7 7 7 7 7 7 7 6 6 . 
+. c c 7 7 6 7 7 7 6 7 7 6 6 6 6 
+c 6 7 6 c c 6 7 6 6 6 6 6 7 7 6 
+c 7 7 7 7 6 6 6 6 6 6 7 7 7 7 6 
+c c 7 7 7 7 7 7 7 7 7 7 7 7 6 c 
+. c 6 7 6 7 7 7 6 7 7 7 6 7 c . 
+. . c c 6 6 7 6 6 6 7 6 6 c . . 
+. . . c c c 6 c 6 6 c c c . . . 
+. . . . . c c c c c c . . . . . 
+. . . . . . . e e . . . . . . . 
+. . . . . . e e e e . . . . . . 
+. . . . . e e e e e e . . . . . 
+. . . . . . . e e . . . . . . . 
+`, 0, 200)
+    Ender.setKind(SpriteKind.ENDER)
+    Ender.setPosition(Math.randomRange(40, 100), 0)
 })
