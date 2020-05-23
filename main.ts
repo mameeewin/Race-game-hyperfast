@@ -611,6 +611,8 @@ let Wall1: Sprite = null
 let Wall: Sprite = null
 let Road: Sprite = null
 let car: Sprite = null
+storyboard.loaderBootSequence.register()
+storyboard.start("")
 game.setDialogFrame(img`
 . . . . . . . . . . . . . . . . . . . . 
 . . 5 . . 5 . . . 5 . . . 5 . . 5 . . . 

@@ -2,7 +2,8 @@
     "name": "Race Game HyperFast",
     "dependencies": {
         "device": "*",
-        "animation": "*"
+        "animation": "*",
+        "storyboard": "*"
     },
     "description": "",
     "files": [
