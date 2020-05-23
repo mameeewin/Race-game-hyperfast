@@ -1,7 +1,6 @@
 # race-game-hyperfast ![Build status badge](https://github.com/mameeewin/race-game-hyperfast/workflows/MakeCode/badge.svg)
 
-https://makecode.com/_0i39t8gKtX5a
-
+https://makecode.com/_M8VgEX0dY2vL
 ## Use this extension
 
 This repository can be added as an **extension** in MakeCode.
